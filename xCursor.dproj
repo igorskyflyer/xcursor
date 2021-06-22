@@ -1,0 +1,225 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{F6FC51AA-06C4-4B57-98B3-38FD1933CBA9}</ProjectGuid>
+			<ProjectVersion>12.0</ProjectVersion>
+			<MainSource>xCursor.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DependencyCheckOutputName>xCursor.exe</DCC_DependencyCheckOutputName>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_UsePackage>vcl;rtl;vclx;vclimg;vclactnband;vcltouch;xmlrtl;bdertl;TeeUI;TeeDB;Tee;vclribbon;dbrtl;vcldb;dsnap;dsnapcon;IndyCore;IndySystem;IndyProtocols;ProcessInfo_pkg</DCC_UsePackage>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="xCursor.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="xCursor_PAS.pas">
+				<Form>formX</Form>
+			</DCCReference>
+			<RcItem Include="files\Image (0).jpg">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>JpgImage_1</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Image (1).jpg">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>JpgImage_2</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Image (2).jpg">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>JpgImage_3</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Image (3).jpg">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>JpgImage_4</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Image (4).jpg">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>JpgImage_5</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Image (5).jpg">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>JpgImage_6</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Image (6).jpg">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>JpgImage_7</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Image (7).jpg">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>JpgImage_8</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Image (8).jpg">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>JpgImage_9</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Image (9).jpg">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>JpgImage_10</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Image (10).jpg">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>JpgImage_11</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Image (11).jpg">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>JpgImage_12</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Image (12).jpg">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>JpgImage_13</ResourceId>
+			</RcItem>
+			<RcItem Include="files\DropBox.png">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>Drop</ResourceId>
+			</RcItem>
+			<RcItem Include="files\DropBox-Hover.png">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>DropOver</ResourceId>
+			</RcItem>
+			<RcItem Include="files\eng.lng">
+				<ContainerId>ResourceItem</ContainerId>
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>eng</ResourceId>
+			</RcItem>
+			<RcItem Include="files\srb.lng">
+				<ContainerId>ResourceItem</ContainerId>
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>srb</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Space.cur">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>Cursor_1</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Electricity.ani">
+				<ContainerId>ResourceItem</ContainerId>
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>Cursor_3</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Bullseye.ani">
+				<ContainerId>ResourceItem</ContainerId>
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>Cursor_5</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Cool.ani">
+				<ContainerId>ResourceItem</ContainerId>
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>Cursor_6</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Game.ani">
+				<ContainerId>ResourceItem</ContainerId>
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>Cursor_7</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Cool Game.ani">
+				<ContainerId>ResourceItem</ContainerId>
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>Cursor_8</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Blue Fire.ani">
+				<ContainerId>ResourceItem</ContainerId>
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>Cursor_4</ResourceId>
+			</RcItem>
+			<RcItem Include="files\Blue.cur">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>Cursor_2</ResourceId>
+			</RcItem>
+			<RcItem Include="files\DropBox-Hover-Not.png">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>DropNot</ResourceId>
+			</RcItem>
+			<RcItem Include="files\DropBox-Hover-Yes.png">
+				<ResourceType>RCData</ResourceType>
+				<ResourceId>DropYes</ResourceId>
+			</RcItem>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">False</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">True</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1033</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">SkyDev</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription">xCursor :) - Your Ultimate Mouse App</VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName">xCursor</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalCopyright">SkyFlyer - Igor Dimitrijević</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalTrademarks">SkyDev</VersionInfoKeys>
+						<VersionInfoKeys Name="OriginalFilename">xCursor</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductName">xCursor</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments">xCursor :) - Your Ultimate Mouse App</VersionInfoKeys>
+						<VersionInfoKeys Name="SpecialBuild">By SkyFlyer</VersionInfoKeys>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclbde140.bpl">Embarcadero BDE DB Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclado140.bpl">Embarcadero ADO DB Components</Excluded_Packages>
+					</Excluded_Packages>
+					<Source>
+						<Source Name="MainSource">xCursor.dpr</Source>
+					</Source>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
